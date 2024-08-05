@@ -1,4 +1,4 @@
 Pillow
 numpy
-PyPDF2
+google-cloud-aiplatform
 os
