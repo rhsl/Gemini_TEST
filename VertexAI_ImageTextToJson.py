@@ -45,7 +45,17 @@ def check_file_mymetype(uploaded_file):
 ## 로컬에서 실행 할때
 ##os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "/Users/gonihyun/TEST/Gemini/Gemini_TEST/gen-lang-client-0203446821-a63cbc40bb73.json"
 ## streamlit 에서 실행 할때
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS')
+# 환경 변수에서 JSON 파일 내용 가져오기 (Base64 인코딩된 값)
+encoded_json = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS')
+decoded_json = base64.b64decode(encoded_json).decode('utf-8')
+
+# 임시 파일 생성 (필요에 따라 생략 가능)
+with open('temp_credentials.json', 'w') as f:
+    f.write(decoded_json)
+
+# 임시 파일을 사용하여 Credentials 객체 생성
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'temp_credentials.json'
+
 
 # 서비스 계정 정보 로드
 # credentials = service_account.Credentials.from_service_account_file(
