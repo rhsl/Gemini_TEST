@@ -1,0 +1,6 @@
+PIL
+numpy
+base64
+vertexai
+PyPDF2
+os
