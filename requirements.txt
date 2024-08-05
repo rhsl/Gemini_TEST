@@ -1,4 +1,3 @@
 Pillow
 numpy
 google-cloud-aiplatform
-os
