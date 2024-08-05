@@ -1,4 +1,4 @@
-PIL
+Pillow
 numpy
 base64
 vertexai
