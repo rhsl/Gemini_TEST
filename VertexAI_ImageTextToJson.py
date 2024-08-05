@@ -6,7 +6,6 @@ import vertexai
 from vertexai.generative_models import GenerativeModel, Part, FinishReason
 import vertexai.preview.generative_models as generative_models
 from google.oauth2 import service_account
-from PyPDF2 import PdfReader ##pip install PyPDF2
 import os
 
 # https://console.cloud.google.com/vertex-ai/generative/multimodal/prompt-examples/Image%20text%20to%20JSON?hl=ko&project=gen-lang-client-0203446821
